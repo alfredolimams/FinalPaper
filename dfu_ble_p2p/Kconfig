@@ -1,0 +1,11 @@
+# Kconfig - nRF52 BEACON UPDATE board configuration
+#
+# Copyright (c) 2016 Nordic Semiconductor ASA
+#
+# SPDX-License-Identifier: Apache-2.0
+
+config  BOARD_BEACON_UPDATE
+	bool "BEACON_UPDATE"
+	depends on SOC_NRF52832_QFAA
+
+source "Kconfig.zephyr"
