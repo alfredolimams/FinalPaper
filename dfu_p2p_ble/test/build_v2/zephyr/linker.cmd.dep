@@ -1,0 +1,35 @@
+zephyr/linker.cmd: \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/soc/arm/nordic_nrf/nrf52/linker.ld \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/arch/arm/cortex_m/scripts/linker.ld \
+ /home/alfredo/Workspace/FinalPaper/dfu_p2p_ble/build/zephyr/include/generated/autoconf.h \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/sections.h \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/section_tags.h \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/toolchain.h \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/toolchain/gcc.h \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/generated_dts_board.h \
+ /home/alfredo/Workspace/FinalPaper/dfu_p2p_ble/build/zephyr/include/generated/generated_dts_board_unfixed.h \
+ /home/alfredo/Workspace/FinalPaper/dfu_p2p_ble/build/zephyr/include/generated/generated_dts_board_unfixed.h.deprecated \
+ /home/alfredo/Workspace/FinalPaper/dfu_p2p_ble/build/zephyr/include/generated/generated_dts_board_fixups.h \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/linker-defs.h \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/sys/util.h \
+ /home/alfredo/Workspace/FinalPaper/dfu_p2p_ble/build/zephyr/include/generated/offsets.h \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/linker-tool.h \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/linker-tool-gcc.h \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/rel-sections.ld \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/priv_stacks-text.ld \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/kobject-text.ld \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/common-rom.ld \
+ /home/alfredo/Workspace/FinalPaper/dfu_p2p_ble/build/zephyr/include/generated/snippets-rodata.ld \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/priv_stacks-rom.ld \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/kobject-rom.ld \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/cplusplus-rom.ld \
+ /home/alfredo/Workspace/FinalPaper/dfu_p2p_ble/build/zephyr/include/generated/snippets-ram-sections.ld \
+ /home/alfredo/Workspace/FinalPaper/dfu_p2p_ble/build/zephyr/include/generated/snippets-noinit.ld \
+ /home/alfredo/Workspace/FinalPaper/dfu_p2p_ble/build/zephyr/include/generated/snippets-rwdata.ld \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/common-ram.ld \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/priv_stacks.ld \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/kobject.ld \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/priv_stacks-noinit.ld \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/cplusplus-ram.ld \
+ /home/alfredo/Workspace/FinalPaper/dfu_p2p_ble/build/zephyr/include/generated/snippets-sections.ld \
+ /home/alfredo/Documents/Softwares/Zephyr/zephyrproject/zephyr/include/linker/debug-sections.ld

@@ -110,20 +110,20 @@ static void disconnected(struct bt_conn *conn, u8_t reason)
     }
 }
 
-static int char2hex(const char *c, u8_t *x)
-{
-    if (*c >= '0' && *c <= '9') {
-        *x = *c - '0';
-    } else if (*c >= 'a' && *c <= 'f') {
-        *x = *c - 'a' + 10;
-    } else if (*c >= 'A' && *c <= 'F') {
-        *x = *c - 'A' + 10;
-    } else {
-        return -EINVAL;
-    }
+// static int char2hex(const char *c, u8_t *x)
+// {
+//     if (*c >= '0' && *c <= '9') {
+//         *x = *c - '0';
+//     } else if (*c >= 'a' && *c <= 'f') {
+//         *x = *c - 'a' + 10;
+//     } else if (*c >= 'A' && *c <= 'F') {
+//         *x = *c - 'A' + 10;
+//     } else {
+//         return -EINVAL;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
 static int hexstr2array(const char *str, u8_t *array, u8_t size)
 {
@@ -144,7 +144,7 @@ static int hexstr2array(const char *str, u8_t *array, u8_t size)
 
         array[i] = array[i] << 4;
 
-        if (char2hex(str, &tmp) < 0) {
+        if (char2hex(*str, &tmp) < 0) {
             return -EINVAL;
         }
 
@@ -180,17 +180,27 @@ void conn_addr_str(struct bt_conn *conn, char *addr, size_t len)
     }
 }
 
+static bool le_param_req(struct bt_conn *conn, struct bt_le_conn_param *param)
+{
+	printk("LE conn  param req: int (0x%04x, 0x%04x) lat %d"
+		    " to %d\n", param->interval_min, param->interval_max,
+		    param->latency, param->timeout);
+
+	return true;
+}
+
+static void le_param_updated(struct bt_conn *conn, u16_t interval,
+			     u16_t latency, u16_t timeout)
+{
+	printk("LE conn param updated: int 0x%04x lat %d "
+		     "to %d\n", interval, latency, timeout);
+}
+
 static struct bt_conn_cb conn_callbacks = {
     .connected    = connected,
     .disconnected = disconnected,
-    // 	.le_param_req = le_param_req,
-    // 	.le_param_updated = le_param_updated,
-    // #if defined(CONFIG_BT_SMP)
-    // 	.identity_resolved = identity_resolved,
-    // #endif
-    // #if defined(CONFIG_BT_SMP) || defined(CONFIG_BT_BREDR)
-    // 	.security_changed = security_changed,
-    // #endif
+    .le_param_req = le_param_req,
+    .le_param_updated = le_param_updated,
 };
 
 static void bt_ready(int err)
